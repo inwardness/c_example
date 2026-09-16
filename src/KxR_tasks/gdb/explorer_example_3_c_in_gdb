@@ -1,0 +1,53 @@
+=> 0x0000000000401136 <+0>:     push   %rbp
+   0x0000000000401137 <+1>:     mov    %rsp,%rbp
+   0x000000000040113a <+4>:     sub    $0x50,%rsp
+   0x000000000040113e <+8>:     jmp    0x40115c <main+38>
+   0x0000000000401140 <+10>:    cmpl   $0x0,-0x4(%rbp)
+   0x0000000000401144 <+14>:    je     0x40115c <main+38>
+   0x0000000000401146 <+16>:    lea    -0x50(%rbp),%rax
+   0x000000000040114a <+20>:    mov    %rax,%rsi
+   0x000000000040114d <+23>:    mov    $0x4021b8,%edi
+   0x0000000000401152 <+28>:    mov    $0x0,%eax
+   0x0000000000401157 <+33>:    call   0x401030 <printf@plt>
+   0x000000000040115c <+38>:    lea    -0x50(%rbp),%rax
+   0x0000000000401160 <+42>:    mov    %rax,%rdi
+   0x0000000000401163 <+45>:    call   0x401178 <get_line>
+   0x0000000000401168 <+50>:    mov    %eax,-0x4(%rbp)
+   0x000000000040116b <+53>:    cmpl   $0x0,-0x4(%rbp)
+   0x000000000040116f <+57>:    jns    0x401140 <main+10>
+   0x0000000000401171 <+59>:    mov    $0x0,%eax
+   0x0000000000401176 <+64>:    leave
+   0x0000000000401177 <+65>:    ret
+End of assembler dump.
+(gdb) i r
+rax            0x401136            4198710
+rbx            0x7fffffffdac8      140737488345800
+rcx            0x403e00            4210176
+rdx            0x7fffffffdad8      140737488345816
+rsi            0x7fffffffdac8      140737488345800
+rdi            0x1                 1
+rbp            0x7fffffffda40      0x7fffffffda40
+rsp            0x7fffffffd9a8      0x7fffffffd9a8
+r8             0x0                 0
+r9             0x7ffff7fca1a0      140737353916832
+r10            0x7fffffffd6d0      140737488344784
+r11            0x203               515
+r12            0x1                 1
+r13            0x0                 0
+r14            0x7ffff7ffd000      140737354125312
+r15            0x403e00            4210176
+rip            0x401136            0x401136 <main>
+eflags         0x246               [ PF ZF IF ]
+cs             0x33                51
+ss             0x2b                43
+ds             0x0                 0
+es             0x0                 0
+fs             0x0                 0
+gs             0x0                 0
+fs_base        0x7ffff7dab740      140737351694144
+gs_base        0x0                 0
+(gdb) x/wx $rsp
+0x7fffffffd9a8: 0xf7db1248
+(gdb) x/wx $rbp
+0x7fffffffda40: 0xffffdaa0
+

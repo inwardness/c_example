@@ -1,0 +1,5 @@
+int a = 0;
+int *p = &a; //& - take address
+a = 1; // direct record, now a == 1 and *pa == 1
+*p = 2; // inrirect record, now a == 2 and *pa == 2
+

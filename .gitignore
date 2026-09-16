@@ -1,0 +1,24 @@
+# Чужие инструменты — лежат локально, в git не идут
+tools/
+
+# Build artifacts
+*.o
+*.d
+*.exe
+*.so
+*.a
+*.obj
+*.out
+
+
+# Build dirs
+build/
+cmake-build-*/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VSCode cache
+.vscode/ipch/
+.vscode/.browse.VC.db*

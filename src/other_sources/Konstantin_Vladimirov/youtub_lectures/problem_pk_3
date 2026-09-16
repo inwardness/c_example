@@ -1,0 +1,8 @@
+Entrance: Program file with a sequence of machine commands and file inputs with Stdin, Entrance: Program file with a sequence of machine commands and file inputs with StDIN
+ The emulator should, when processing each command in, request entering from the vigilant flow and issue output at each command of out
+example:
+001.enc: 0x70 0xc7 0xc1 0x87 0x27 0xc5 0x8d 0xc1 0x87 0x6f 0xc5 0xc7 
+001.in: 104 64
+
+> problem_mk 001.enc < 001.in
+112 216 63 111

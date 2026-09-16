@@ -1,0 +1,9 @@
+INPUT:
+0x70 0xc7 0xc1 0x87
+
+OUTPUT:
+MOVI 112
+OUT D
+IN B
+ADD B,D
+
