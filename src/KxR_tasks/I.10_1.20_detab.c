@@ -4,7 +4,7 @@
 #define MAXLINE 1000
 #define TAB 8
 
-int max;
+int max = 0;
 char line[MAXLINE];
 
 void clrlin(char line[],int lim);
@@ -12,8 +12,8 @@ int f1getline(char line[],int lim);
 int tab(char line[],int len);
 
 int main()
-{   
-    int i;
+{
+
     int len = 0;
     extern int f1getline(char line[], int lim);
     extern void clrlin(char line[],int lim);
@@ -32,16 +32,16 @@ void clearline(char line[],int max)
     int i;
     for ( i = 0; i < max; i++){
         line[i] = 0;
-        }    
+        }
     line[max] = 0;
 }
 
  int f1getline(char line[],int lim)
 {
     int i,c;
-    
-    for ( i = 0; i < max - 1 && (c = getchar())!=EOF && c!='\n'; i++)
-    
+
+    for ( i = 0; i < lim - 1 && (c = getchar())!=EOF && c!='\n'; i++)
+
         line[i] = c;
         if (c == '\n')
         {
@@ -49,8 +49,8 @@ void clearline(char line[],int max)
            ++i;
         }
         line[i] = '\0';
-    
-  return i;  
+
+  return i;
 }
 
 int tab(char line[],int len)
@@ -61,7 +61,7 @@ int tab(char line[],int len)
     int spacechar = 0;
     for ( i = 0; i < len; i++)
     {
-        
+
         if(line[i] == '\t')
         {
             spacechar = tab - (position % tab);
@@ -70,7 +70,7 @@ int tab(char line[],int len)
                 position++;
                 putchar('_');
             }
-        
+
         }
         else if (line[i] == '\n')
         {
@@ -78,7 +78,7 @@ int tab(char line[],int len)
             position = 0;
             putchar('\n');
         }
-        
+
         else
         {
         printf("%c",line[i]);

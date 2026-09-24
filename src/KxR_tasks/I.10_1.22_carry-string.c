@@ -12,7 +12,6 @@ int main(){
     extern int get1line(char line[], int lim);
     extern void clrlin(char line[], int lim);
     extern void fold_line(char line[], int lim);
-    int i =0;
     int len =0;
     printf("Enter a string for a fold line:\n");
         while ((len = (get1line(line,MAXLINE)) )> 0)
@@ -39,18 +38,17 @@ int get1line(char line[], int lim){
         if (c == '\n')
         {
             line[i] = c;
-            ++i;   
+            ++i;
         }
         line[i] = '\0';
-    
-    return i;     
+
+    return i;
 }
 
 void fold_line(char line[], int lim){
     int i;
-    int last_position =0;
-    int back_position =0;
-    
+
+
     for ( i = 0; i < lim; ++i){
         if (i%N==0){
             if (line[i]==' ' && line[i] == '\t'){
@@ -59,7 +57,7 @@ void fold_line(char line[], int lim){
             else{
                 putchar('-');
             }
-        } 
+        }
     }
     printf("%s",line);
 }
