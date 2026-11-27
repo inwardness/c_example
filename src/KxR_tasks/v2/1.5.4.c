@@ -14,6 +14,8 @@ int main(void){
         if (c==' '||c=='\n'||c=='\t')        {state = OUT;}
             else if(state == OUT)            {state = IN;++nw;}
     }
-    printf("%d,%d,%d\n",nl,nw,nc);
+    printf("nl:%d,nw:%d,nc:%d\n",nl,nw,nc);
 return 0;
 }
+//for exersize 1.11(1.5.4) testfile.txt contain \b -symbol. he is invisible for output but count for program
+//special sybols doesn't see in output and it's count
